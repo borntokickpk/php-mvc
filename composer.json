@@ -1,0 +1,16 @@
+{
+    "name": "hassan/php-mvc",
+    "description": "This is my php framework practice",
+    "authors": [
+        {
+            "name": "Hassan",
+            "email": "hassanhafiz44@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
+}
