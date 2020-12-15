@@ -21,4 +21,17 @@ class Router
     {
         $this->routes['post'][$path] = $callback;
     }
+
+    public function resolve()
+    {
+        $path = $this->request->getPath();
+        $method = $this->request->getMethod();
+        $callback = $this->routes[$method][$path] ?? false;
+
+        if($callback === false) {
+            return "Not found";
+        }
+
+        return call_user_func($callback);
+    }
 }
