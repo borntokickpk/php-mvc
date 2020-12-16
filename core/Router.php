@@ -35,6 +35,15 @@ class Router
             return "Not found";
         }
 
+        if(is_string($callback)) {
+            return $this->renderView($callback); 
+        }
+
         return call_user_func($callback);
+    }
+
+    public function renderView($view)
+    {
+        include_once Application::$ROOT_PATH . "/views/$view.php";
     }
 }
