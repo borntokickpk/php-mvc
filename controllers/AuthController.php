@@ -7,6 +7,11 @@ use app\core\Request;
 
 class AuthController extends Controller
 {
+    public function __construct()
+    {
+        $this->setLayout('auth');
+    }
+    
     public function login()
     {
         return $this->render('login');
