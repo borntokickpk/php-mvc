@@ -16,19 +16,19 @@ class Request
         return substr($path, 0, $position);
     }
 
-    public function getMethod()
+    public function method()
     {
         return strtolower($_SERVER['REQUEST_METHOD']);
     }
 
     public function isGet()
     {
-        return $this->getMethod() === 'get';
+        return $this->method() === 'get';
     }
 
     public function isPost()
     {
-        return $this->getMethod() === 'post';
+        return $this->method() === 'post';
     }
 
     public function getBody()
