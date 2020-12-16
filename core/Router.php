@@ -40,7 +40,8 @@ class Router
         }
 
         if(is_array($callback)) {
-            $callback[0] = new $callback[0];
+            $instance = new $callback[0];
+            $callback[0] = Application::$app->controller  = $instance;
         }
 
         return call_user_func($callback, $this->request);
