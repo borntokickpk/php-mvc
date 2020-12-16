@@ -31,7 +31,9 @@
         </div>
     </nav>
     
-    {{content}}
+    <div class="container-fluid">
+        {{content}}
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
