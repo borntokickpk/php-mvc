@@ -27,4 +27,12 @@ class Database
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=INNODB;");
     }
+
+    public function getAppliedMigrations()
+    {
+        $statement = $this->pdo->prepare("SELECT migration from migrations");
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_COLUMN);
+    }
 }
