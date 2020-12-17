@@ -26,7 +26,7 @@
     </div>
     <div class="form-group">
         <label for="confirmPassword">Confirm Password</label>
-        <input type="pass" class="form-control" id="confirmpassword" name="confirmPassword">
+        <input type="password" class="form-control" id="confirmpassword" name="confirmPassword">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
